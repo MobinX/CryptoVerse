@@ -5,5 +5,12 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  options: {
+    safelist: [
+      /data-theme$/,
+    ]
+  },
+  plugins: [
+    require('daisyui'),
+  ],
 }
