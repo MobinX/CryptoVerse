@@ -1,10 +1,19 @@
 import React from 'react';
+import { SideNav } from './components/SideNav';
+import {Route,Routes} from "react-router-dom"
+import { Home } from './components/Home';
+
 
 
 function App() {
   return (
-    <div className="bg-purple-700">
-      <h2 className='bg-purple-700'>hq</h2>
+    <div className="prose md:prose-lg lg:prose-xl prose-h2:text-primary row justify-between">
+      <SideNav className='flex-none' />
+      <div className='grow row'>
+      <Routes>
+        <Route  path="/" element={<Home />} />
+      </Routes>
+      </div>
     </div>
   );
 }
